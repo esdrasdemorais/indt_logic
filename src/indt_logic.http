@@ -1,0 +1,9 @@
+@indt_logic_HostAddress = http://localhost:5243
+
+GET {{indt_logic_HostAddress}}/routes/
+Accept: application/json
+
+GET {{indt_logic_HostAddress}}/search-routes
+Accept: application/json
+
+###
