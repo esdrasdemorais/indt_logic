@@ -15,7 +15,6 @@ public abstract class Repository<T> : IRepository<T> where T : Object {
 
     public Repository(IConfiguration configuration) {
 	connectionUri = "" + Environment.GetEnvironmentVariable("mongoConnectionString");
-	Console.WriteLine("connectionUri="+connectionUri);System.Environment.Exit(0);
 	mongoClientSettings = MongoClientSettings.FromConnectionString(connectionUri);
 	mongoClientSettings.ServerApi = new ServerApi(ServerApiVersion.V1);
 	mongoClient = new MongoClient(mongoClientSettings);
